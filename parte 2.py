@@ -10,11 +10,18 @@ def is_prime(a):
     si="1"
     print(si)
 
-print("Este programa calculara si el numero ingresado es primo o no. Si el mensaje devuelto es 1 significa que el numero es primo, si devuelve 0 significa que el numero no es primo, si devuelve -1 significa que ha ocurrido un error.")
+print("-Este programa calculara si el numero ingresado es primo o no. Si el mensaje devuelto es 1 significa que el numero es primo, si devuelve 0 significa que el numero no es primo, si devuelve -1 significa que ha ocurrido un error. Del mismo modo cuando no desee ingresar mas numeros digite -00")
 print("")
 try:
+  
   a=int(input("Por favor ingrese un numero "))
-  is_prime(a)
+  while a!=-00:
+      if a !=0 and a >1:
+        is_prime(a)
+        a=int(input("Por favor ingrese un numero "))
+      else:
+        break 
+        print("Fin del programa")
 except:
   error="-1"
   print(error)
